@@ -55,6 +55,21 @@ void pattern6(int x){
   }
 }
 
+void pattern7(int x){
+  for(int i=x; i>0 ;i--){
+    for (int j=0; j<i-1; j++){
+      cout<<" ";
+    }
+    for(int j =0; j<x-i+1;j++){
+      cout<<"*";
+    }
+    for(int j =0; j<x-i;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+}
+
 
 
 
@@ -115,6 +130,13 @@ int main(){
         cout<<"enter size of pattern: ";
         cin>>size;
         pattern6(size);
+        break;
+      }
+
+      case 7:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern7(size);
         break;
       }
 
