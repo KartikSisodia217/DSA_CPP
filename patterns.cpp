@@ -70,7 +70,76 @@ void pattern7(int x){
   }
 }
 
+void pattern8(int n){
+  for(int i=n; i>0 ;i--){
+    for (int j=0; j<n-i; j++){
+      cout<<" ";
+    }
+    for(int j =0; j<i;j++){
+      cout<<"*";
+    }
+    for(int j =0; j<i-1;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+}
 
+void pattern9(int n){
+  for(int i=n; i>0 ;i--){
+    for (int j=0; j<i-1; j++){
+      cout<<" ";
+    }
+    for(int j =0; j<n-i+1;j++){
+      cout<<"*";
+    }
+    for(int j =0; j<n-i;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+  for(int i=n; i>0 ;i--){
+    for (int j=0; j<n-i; j++){
+      cout<<" ";
+    }
+    for(int j =0; j<i;j++){
+      cout<<"*";
+    }
+    for(int j =0; j<i-1;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+}
+
+void pattern10(int n){
+  for (int i=0; i<n; i++){
+    for(int j =0; j<=i;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+  for(int i=n-1; i>0; i--){
+    for(int j=0; j<i;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+}
+
+void pattern11(int n){
+  for(int i=0; i<n;i++){
+    for (int j=0; j<=i; j++){
+      if((i+j)%2==0){
+        cout<<1<<" ";
+      }
+      else{
+        cout<<0<<" ";
+      }
+    }
+    cout<<'\n';
+  }
+}
 
 
 
@@ -139,6 +208,36 @@ int main(){
         pattern7(size);
         break;
       }
+
+      case 8:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern8(size);
+        break;
+      }
+
+      case 9:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern9(size);
+        break;
+      }
+
+      case 10:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern10(size);
+        break;
+      }
+
+      case 11:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern11(size);
+        break;
+      }
+
+
 
       default: 
         cout<<"Invalid pattern"<<endl;
