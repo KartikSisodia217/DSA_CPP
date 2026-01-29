@@ -141,7 +141,159 @@ void pattern11(int n){
   }
 }
 
+void pattern12(int n){
+  for(int i=0; i<n;i++){
+    for(int j=0;j<=i;j++){
+      cout<<j+1;
+    }
+    for (int j=0;j<n-i-1;j++){
+      cout<<"  ";
+    }
+    for(int j=i+1;j>0;j--){
+      cout<<j;
+    }
+    cout<<'\n';
+  }
+}
 
+void pattern13(int n){
+  int counter = 1;
+  for (int i=0; i<n;i++){
+    for (int j=0; j<=i;j++){
+      cout<<counter<<" ";
+      counter++;
+    }
+    cout<<'\n';
+  }
+}
+
+void pattern14(int n){
+  char letter;
+  for (int i=0; i<n;i++){
+    letter = 'A';
+    for (int j=0; j<=i;j++){
+      letter = 'A' + j;
+      cout<<letter;
+    }
+  cout<<'\n';
+  }
+}
+
+void pattern15(int n){
+  char letter;
+  for (int i=0; i<n;i++){
+    letter = 'A';
+    for (int j=0; j<n-i;j++){
+      letter = 'A' + j;
+      cout<<letter;
+    }
+    cout<<'\n';
+  }
+}
+
+void pattern16(int n){
+  char letter;
+  for (int i=0; i<n;i++){
+    letter = 'A'+i;
+    for (int j=0; j<=i;j++){
+      cout<<letter;
+    }
+    cout<<'\n';
+  }
+}
+
+void pattern17(int n) {
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+      cout << " ";
+    }
+    for (int j = 0; j <= i; j++) {
+      cout << char('A' + j);
+    }
+    for (int j = i - 1; j >= 0; j--) {
+      cout << char('A' + j);
+    }
+    cout << '\n';
+  }
+}
+
+void pattern18(int n){
+  for(int i=1; i <=n; i++){
+    for(char letter = 'A'+n-i; letter<'A'+n; letter ++ ){
+      cout<<letter<<" ";
+    }
+    cout<<'\n';
+  }
+}
+
+void pattern19(int n){
+  for(int i =0; i<n;i++){
+    for(int j=0;j<n-i;j++){
+      cout<<"*";
+    }
+    for(int j=0; j<i; j++){
+      cout<<"  ";
+    }
+    for(int j=0;j<n-i;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+  for(int i=0; i<n;i++){
+    for(int j=0; j<=i;j++){
+      cout<<"*";
+    }
+    for(int j=0; j<n-i-1;j++){
+      cout<<"  ";
+    }
+    for(int j=0; j<=i;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+}
+
+
+void pattern20(int n){
+  for(int i=0; i<n;i++){
+    for(int j=0; j<=i;j++){
+      cout<<"*";
+    }
+    for(int j=0; j<n-i-1;j++){
+      cout<<"  ";
+    }
+    for(int j=0; j<=i;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+  for(int i =0; i<n-1;i++){
+    for(int j=0;j<n-i-1;j++){
+      cout<<"*";
+    }
+    for(int j=0; j<=i; j++){
+      cout<<"  ";
+    }
+    for(int j=0;j<n-i-1;j++){
+      cout<<"*";
+    }
+    cout<<'\n';
+  }
+}
+
+void pattern21(int n){
+  for (int i=0; i<n; i++){
+    for (int j=0; j<n;j++){
+      if(i==0 || i ==n-1 || j == 0 || j==n-1){
+        cout<<"*";
+      }
+      else{
+        cout<<" ";
+      }
+    }
+    cout<<'\n';
+  }
+}
 
 
 
@@ -237,6 +389,75 @@ int main(){
         break;
       }
 
+      case 12:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern12(size);
+        break;
+      }
+
+      case 13:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern13(size);
+        break;
+      }
+
+      case 14:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern14(size);
+        break;
+      }
+
+      case 15:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern15(size);
+        break;
+      }
+
+      case 16:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern16(size);
+        break;
+      }
+
+      case 17:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern17(size);
+        break;
+      }
+
+      case 18:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern18(size);
+        break;
+      }
+
+      case 19:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern19(size);
+        break;
+      }
+
+      case 20:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern20(size);
+        break;
+      }
+
+      case 21:{
+        cout<<"enter size of pattern: ";
+        cin>>size;
+        pattern21(size);
+        break;
+      }
 
 
       default: 
